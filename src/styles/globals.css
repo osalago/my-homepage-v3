@@ -1,0 +1,162 @@
+/* ========================================
+   GLOBAL CSS VARIABLES & BASE STYLES
+   Portfolio - Dr. Oliver Sala
+   ======================================== */
+
+/* Font imports - Using clean, professional fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@400;500;600;700&display=swap');
+
+/* ========================================
+   CSS VARIABLES - LIGHT THEME (Default)
+   ======================================== */
+:root {
+  /* Fonts */
+  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Primary colors */
+  --color-primary: #4F7DF3;
+  --color-primary-light: #7B9EF7;
+  --color-primary-dark: #3A5FD9;
+  --color-primary-bg: rgba(79, 125, 243, 0.1);
+  --color-primary-bg-hover: rgba(79, 125, 243, 0.15);
+  --color-primary-shadow: rgba(79, 125, 243, 0.25);
+
+  /* Background colors */
+  --color-bg-primary: #FFFFFF;
+  --color-bg-secondary: #F8FAFC;
+  --color-bg-tertiary: #F1F5F9;
+
+  /* Text colors */
+  --color-text-primary: #1E293B;
+  --color-text-secondary: #64748B;
+  --color-text-muted: #94A3B8;
+
+  /* Border colors */
+  --color-border: #E2E8F0;
+  --color-border-hover: #CBD5E1;
+
+  /* Shadow colors */
+  --color-shadow: rgba(15, 23, 42, 0.06);
+  --color-shadow-hover: rgba(15, 23, 42, 0.12);
+}
+
+/* ========================================
+   CSS VARIABLES - DARK THEME
+   ======================================== */
+:root.dark,
+[data-theme="dark"] {
+  /* Primary colors remain similar but adjusted for dark mode */
+  --color-primary: #6B8DF5;
+  --color-primary-light: #8BA4F7;
+  --color-primary-dark: #5678E8;
+  --color-primary-bg: rgba(107, 141, 245, 0.12);
+  --color-primary-bg-hover: rgba(107, 141, 245, 0.18);
+  --color-primary-shadow: rgba(107, 141, 245, 0.3);
+
+  /* Background colors */
+  --color-bg-primary: #0F172A;
+  --color-bg-secondary: #1E293B;
+  --color-bg-tertiary: #334155;
+
+  /* Text colors */
+  --color-text-primary: #F1F5F9;
+  --color-text-secondary: #94A3B8;
+  --color-text-muted: #64748B;
+
+  /* Border colors */
+  --color-border: #334155;
+  --color-border-hover: #475569;
+
+  /* Shadow colors */
+  --color-shadow: rgba(0, 0, 0, 0.2);
+  --color-shadow-hover: rgba(0, 0, 0, 0.35);
+}
+
+/* ========================================
+   GLOBAL RESETS & BASE STYLES
+   ======================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Remove default button styles */
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* Remove default link styles */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Image defaults */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* List defaults */
+ul, ol {
+  list-style: none;
+}
+
+/* Selection styling */
+::selection {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+/* Scrollbar styling (Webkit browsers) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
+
+/* Firefox scrollbar */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border) var(--color-bg-secondary);
+}

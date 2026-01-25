@@ -1,0 +1,143 @@
+.project-card {
+  background: var(--color-bg-primary);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px var(--color-shadow);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), 
+              box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              background-color 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px var(--color-shadow-hover);
+}
+
+/* Image */
+.project-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.02) 100%
+  );
+  transition: background 0.3s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.08);
+}
+
+.project-card:hover .project-overlay {
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+}
+
+/* Content */
+.project-content {
+  padding: 1.5rem;
+}
+
+.project-title {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0 0 0.75rem;
+  transition: color 0.3s ease;
+}
+
+.project-description {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin: 0 0 1rem;
+  transition: color 0.3s ease;
+}
+
+/* Technology tags */
+.project-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.tech-tag {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-primary);
+  background: var(--color-primary-bg);
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.project-card:hover .tech-tag {
+  background: var(--color-primary-bg-hover);
+}
+
+/* View Project button */
+.project-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.875rem 1.5rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: white;
+  background: var(--color-primary);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-link:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--color-primary-shadow);
+}
+
+.project-link-icon {
+  font-size: 1rem;
+  transition: transform 0.25s ease;
+}
+
+.project-link:hover .project-link-icon {
+  transform: translate(2px, -2px);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .project-content {
+    padding: 1.25rem;
+  }
+
+  .project-title {
+    font-size: 1.1rem;
+  }
+}
