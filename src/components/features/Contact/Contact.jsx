@@ -1,28 +1,53 @@
-import { useState } from 'react';
 import { HiPaperAirplane } from 'react-icons/hi';
+import { useFormValidation } from '../../../hooks';
 import './Contact.css';
 
-const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
+// Validation schema
+const validationSchema = {
+  name: {
+    required: true,
+    minLength: 2,
+    displayName: 'Name',
+  },
+  email: {
+    required: true,
+    email: true,
+    displayName: 'Email',
+  },
+  message: {
+    required: true,
+    minLength: 10,
+    displayName: 'Message',
+  },
+};
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+const initialValues = {
+  name: '',
+  email: '',
+  message: '',
+};
+
+const Contact = () => {
+  const {
+    getFieldProps,
+    getFieldState,
+    handleSubmit,
+    resetForm,
+  } = useFormValidation(initialValues, validationSchema);
+
+  const onSubmit = (values) => {
+    // TODO: Implement contact-api
+    console.log('Form submitted:', values);
+    resetForm();
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // TODO: Implement contact-api
-    console.log('Form submitted:', formData);
-    // Reset form after submission
-    setFormData({ name: '', email: '', message: '' });
+  // Helper to build className for inputs
+  const getInputClassName = (fieldName, baseClass) => {
+    const { isInvalid, isValid } = getFieldState(fieldName);
+    let className = baseClass;
+    if (isInvalid) className += ' input-error';
+    if (isValid) className += ' input-valid';
+    return className;
   };
 
   return (
@@ -36,19 +61,19 @@ const Contact = () => {
         </div>
 
         <div className="contact-form-wrapper">
-          <div className="contact-form-container">
+          <form className="contact-form-container" onSubmit={handleSubmit(onSubmit)} noValidate>
             <div className="form-group">
               <label htmlFor="name" className="form-label">Name</label>
               <input
                 type="text"
                 id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
                 placeholder="Your name"
-                className="form-input"
-                required
+                className={getInputClassName('name', 'form-input')}
+                {...getFieldProps('name')}
               />
+              {getFieldState('name').isInvalid && (
+                <span className="form-error">{getFieldState('name').error}</span>
+              )}
             </div>
 
             <div className="form-group">
@@ -56,34 +81,34 @@ const Contact = () => {
               <input
                 type="email"
                 id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
                 placeholder="your.email@example.com"
-                className="form-input"
-                required
+                className={getInputClassName('email', 'form-input')}
+                {...getFieldProps('email')}
               />
+              {getFieldState('email').isInvalid && (
+                <span className="form-error">{getFieldState('email').error}</span>
+              )}
             </div>
 
             <div className="form-group">
               <label htmlFor="message" className="form-label">Message</label>
               <textarea
                 id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
                 placeholder="Your message..."
-                className="form-textarea"
+                className={getInputClassName('message', 'form-textarea')}
                 rows="5"
-                required
+                {...getFieldProps('message')}
               />
+              {getFieldState('message').isInvalid && (
+                <span className="form-error">{getFieldState('message').error}</span>
+              )}
             </div>
 
-            <button type="button" onClick={handleSubmit} className="form-submit">
+            <button type="submit" className="form-submit">
               Send Message
               <HiPaperAirplane className="form-submit-icon" />
             </button>
-          </div>
+          </form>
         </div>
       </div>
     </section>

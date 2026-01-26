@@ -90,6 +90,51 @@
   box-shadow: 0 0 0 3px var(--color-primary-bg);
 }
 
+/* Validation states */
+.form-input.input-error,
+.form-textarea.input-error {
+  border-color: var(--color-error);
+  background: var(--color-error-bg);
+}
+
+.form-input.input-error:focus,
+.form-textarea.input-error:focus {
+  border-color: var(--color-error);
+  box-shadow: 0 0 0 3px var(--color-error-shadow);
+}
+
+.form-input.input-valid,
+.form-textarea.input-valid {
+  border-color: var(--color-success);
+}
+
+.form-input.input-valid:focus,
+.form-textarea.input-valid:focus {
+  border-color: var(--color-success);
+  box-shadow: 0 0 0 3px var(--color-success-shadow);
+}
+
+/* Error message */
+.form-error {
+  display: block;
+  margin-top: 0.5rem;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--color-error);
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .form-input:hover:not(:focus),
 .form-textarea:hover:not(:focus) {
   border-color: var(--color-border-hover);
