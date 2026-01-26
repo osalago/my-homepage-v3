@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
+import { Contact, Header, Hero, Projects } from './components';
 import { useThemeStore } from './store';
-import { Header, Hero, Projects, Contact } from './components';
 import './styles/globals.css';
 
 function App() {
