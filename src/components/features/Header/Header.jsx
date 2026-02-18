@@ -1,8 +1,9 @@
-import { useThemeStore } from '../../../store';
-import { useScrollSpy } from '../../../hooks';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaGoogle, FaLinkedin } from 'react-icons/fa';
 import { HiMoon, HiSun } from 'react-icons/hi';
+import { useScrollSpy } from '../../../hooks';
+import { useThemeStore } from '../../../store';
 import './Header.css';
+import { FaGoogleScholar } from 'react-icons/fa6';
 
 const navItems = [
   { id: 'home', label: 'Home' },
@@ -11,20 +12,20 @@ const navItems = [
 ];
 
 const socialLinks = [
-  { 
-    icon: FaGithub, 
-    href: 'https://github.com', 
-    label: 'GitHub' 
+  {
+    icon: FaGithub,
+    href: 'https://github.com/osalago',
+    label: 'GitHub',
   },
-  { 
-    icon: FaLinkedin, 
-    href: 'https://linkedin.com', 
-    label: 'LinkedIn' 
+  {
+    icon: FaLinkedin,
+    href: 'https://www.linkedin.com/in/oliversala/',
+    label: 'LinkedIn',
   },
-  { 
-    icon: FaTwitter, 
-    href: 'https://twitter.com', 
-    label: 'Twitter' 
+  {
+    icon: FaGoogleScholar,
+    href: 'https://scholar.google.com/citations?user=4V-m6ZcAAAAJ&hl=de',
+    label: 'GoogleScholar',
   },
 ];
 
@@ -37,11 +38,12 @@ const Header = () => {
     if (element) {
       const headerOffset = 80;
       const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      const offsetPosition =
+        elementPosition + window.pageYOffset - headerOffset;
 
       window.scrollTo({
         top: offsetPosition,
-        behavior: 'smooth'
+        behavior: 'smooth',
       });
     }
   };
@@ -49,8 +51,15 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header-container">
-        <a href="#home" className="logo" onClick={(e) => { e.preventDefault(); scrollToSection('home'); }}>
-          MyHomepage
+        <a
+          href="#home"
+          className="logo"
+          onClick={(e) => {
+            e.preventDefault();
+            scrollToSection('home');
+          }}
+        >
+          Oliver Sala's Homepage
         </a>
 
         <nav className="nav">

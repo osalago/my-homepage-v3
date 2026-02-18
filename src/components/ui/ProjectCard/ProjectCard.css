@@ -3,9 +3,10 @@
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 20px var(--color-shadow);
-  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), 
-              box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1),
-              background-color 0.3s ease;
+  transition:
+    transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 0.3s ease;
 }
 
 .project-card:hover {
@@ -91,7 +92,9 @@
   color: var(--color-primary);
   background: var(--color-primary-bg);
   border-radius: 6px;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
 }
 
 .project-card:hover .tech-tag {
@@ -113,7 +116,10 @@
   background: var(--color-primary);
   border-radius: 8px;
   text-decoration: none;
-  transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .project-link:hover {

@@ -8,8 +8,14 @@ export const projects = [
     description:
       'A full-featured online odor profile prediction platform with scent database & recipe input.',
     image: '/public/images/odorPrediction.jpg',
-    technologies: ['Python', 'javascript', 'quantumchemistry'],
-    link: '#',
+    technologies: [
+      'Python',
+      'javascript',
+      'ML',
+      'Quantum Chemistry',
+      'backend',
+    ],
+    link: 'https://patents.google.com/patent/US20230360744A1/en',
   },
   {
     id: 2,
@@ -17,19 +23,20 @@ export const projects = [
     description:
       'Full functional & responsive website with menu, ordering, and more features.',
     image: '/public/images/restaurant-italy.png',
-    technologies: ['React', 'API', 'SPA'],
-    link: '#',
+    technologies: ['React', 'API', 'SPA', 'UX/UI'],
+    link: 'https://github.com/osalago/littleLemon-capstone.git',
   },
   {
     id: 3,
-    title: 'Weather Dashboard',
+    title: 'Google Scholar',
     description:
-      'Beautiful weather app with forecasts, maps, and location-based data.',
+      'View my publications, patents, and book-contribution on Google Scholar.',
     image:
       'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&h=600&fit=crop',
-    technologies: ['React', 'API', 'Chart.js'],
-    link: '#',
+    technologies: ['Cheminformatics', 'Chemistry', 'Science'],
+    link: 'https://scholar.google.com/citations?user=4V-m6ZcAAAAJ&hl=de',
   },
+  /*
   {
     id: 4,
     title: 'Social Media Clone',
@@ -42,12 +49,11 @@ export const projects = [
   },
   {
     id: 5,
-    title: 'Portfolio Generator',
-    description:
-      'Tool to create professional portfolios with customizable themes and sections.',
+    title: 'Google Scholar',
+    description: 'View my publications, books, and patents on Google Scholar.',
     image:
       'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=600&fit=crop',
-    technologies: ['React', 'Tailwind', 'Redux'],
+    technologies: ['Cheminformatics', 'Chemistry', 'Science'],
     link: '#',
   },
   {
@@ -59,7 +65,9 @@ export const projects = [
     technologies: ['React', 'API', 'Tailwind'],
     link: '#',
   },
+*/
 ];
+
 
 // To add a new project, simply add a new object following the same structure:
 // {
@@ -70,3 +78,4 @@ export const projects = [
 //   technologies: ["Tech1", "Tech2", "Tech3"],
 //   link: "https://project-link.com",
 // },
+//

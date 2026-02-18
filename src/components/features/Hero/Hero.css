@@ -38,6 +38,7 @@
 }
 
 .hero-subtitle {
+  max-width: 400px;
   font-family: var(--font-body);
   font-size: clamp(1.25rem, 2.5vw, 1.5rem);
   font-weight: 500;
