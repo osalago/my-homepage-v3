@@ -7,7 +7,7 @@ export const projects = [
     title: 'Odor Prediction System',
     description:
       'A full-featured online odor profile prediction platform with scent database & recipe input.',
-    image: '/public/images/odorPrediction.jpg',
+    image: '/public/images/odorPrediction-v2.jpg',
     technologies: [
       'Python',
       'javascript',
