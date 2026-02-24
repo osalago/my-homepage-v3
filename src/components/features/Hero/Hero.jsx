@@ -17,46 +17,60 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="hero">
-      <div className="hero-container">
-        <div className="hero-content">
-          <h1 className="hero-title">
-            Hi, I'm <span className="hero-name">Dr. Oliver Sala</span>
-          </h1>
-          <h2 className="hero-subtitle">Full-Stack Developer & Designer | Machine Learning Engineer | Research Scientist | Quantum Chemist </h2>
-          <p className="hero-description">
-            I create beautiful, responsive web applications with modern
-            technologies. Passionate about clean code, user experience,
-            and continuous learning.
-          </p>
-          <div className="hero-actions">
-            <button
-              className="btn btn-primary"
-              onClick={() => scrollToSection('projects')}
-            >
-              View Projects
-              <HiArrowRight className="btn-icon" />
-            </button>
-            <button
-              className="btn btn-secondary"
-              onClick={() => scrollToSection('contact')}
-            >
-              Contact Me
-            </button>
+    <>
+      <section id="home" className="hero">
+        <div className="hero-container">
+          <div className="hero-content">
+            <h1 className="hero-title">
+              Hi, I'm <span className="hero-name">Dr. Oliver Sala</span>
+            </h1>
+            <h2 className="hero-subtitle">
+              Full-Stack Developer & Designer | Machine Learning Engineer |
+              Research Scientist | Quantum Chemist{' '}
+            </h2>
+            <p className="hero-description">
+              I create beautiful, responsive web applications with modern
+              technologies. Passionate about clean code, user experience, and
+              continuous learning.
+            </p>
+            <div className="hero-actions">
+              <button
+                className="btn btn-primary"
+                onClick={() => scrollToSection('projects')}
+              >
+                View Projects
+                <HiArrowRight className="btn-icon" />
+              </button>
+              <button
+                className="btn btn-secondary"
+                onClick={() => scrollToSection('contact')}
+              >
+                Contact Me
+              </button>
+            </div>
           </div>
-        </div>
 
-        <div className="hero-image">
-          <div className="hero-avatar-wrapper">
-            <img
-              src="https://api.dicebear.com/7.x/personas/svg?seed=Mark&backgroundColor=b6e3f4"
-              alt="Dr. Oliver Sala"
-              className="hero-avatar"
-            />
+          <div className="hero-image">
+            <div className="hero-avatar-wrapper">
+              <img
+                src="https://api.dicebear.com/7.x/personas/svg?seed=Mark&backgroundColor=b6e3f4"
+                alt="Dr. Oliver Sala"
+                className="hero-avatar"
+              />
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <section id="Home" className="logo-os">
+        <div className="logo-display">
+          <div className="logo-synthwave">
+            <div className="main-text">OS</div>
+            <div className="horizon-line"></div>
+            <span className="reflection">OS</span>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 

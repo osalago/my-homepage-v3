@@ -1,5 +1,5 @@
 .hero {
-  min-height: 100vh;
+  min-height: 60vh;
   display: flex;
   align-items: center;
   padding: 120px 2rem 80px;
@@ -129,7 +129,9 @@
   background: var(--color-bg-secondary);
   border: 3px solid var(--color-primary);
   overflow: hidden;
-  transition: border-color 0.3s ease, background-color 0.3s ease;
+  transition:
+    border-color 0.3s ease,
+    background-color 0.3s ease;
 }
 
 .hero-avatar-wrapper::before {
@@ -137,7 +139,11 @@
   position: absolute;
   inset: -3px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-primary-light) 100%
+  );
   z-index: -1;
   opacity: 0.3;
   transition: opacity 0.3s ease;
@@ -152,6 +158,76 @@
 
 .hero-avatar-wrapper:hover .hero-avatar {
   transform: scale(1.05);
+}
+
+/* Logo */
+.logo-os {
+  min-height: 40vh;
+  display: grid;
+  grid-template-columns: auto;
+  align-items: center;
+  padding: 120px 2rem 80px;
+  background: black;
+  transition: background-color 0.3s ease;
+}
+
+.logo-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;
+  margin-bottom: 20px;
+}
+
+.logo-synthwave {
+  text-align: center;
+  position: relative;
+}
+
+.logo-synthwave .main-text {
+  font-family: 'Audiowide', cursive;
+  font-size: 90px;
+  background: linear-gradient(
+    180deg,
+    var(--neon-teal) 0%,
+    var(--neon-blue) 40%,
+    #0066aa 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 12px;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 0 15px rgba(0, 229, 200, 0.3));
+}
+
+.logo-synthwave .reflection {
+  font-family: 'Audiowide', cursive;
+  font-size: 90px;
+  background: linear-gradient(180deg, #00aa55 0%, transparent 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 12px;
+  transform: scaleY(-0.4) translateY(-20px);
+  opacity: 0.9;
+  display: block;
+  line-height: 1;
+}
+
+.logo-synthwave .horizon-line {
+  width: 160px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--neon-teal),
+    transparent
+  );
+  margin: -8px auto 0;
+  position: relative;
+  z-index: 3;
 }
 
 /* Responsive */
