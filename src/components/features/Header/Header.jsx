@@ -1,9 +1,9 @@
-import { FaGithub, FaGoogle, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGoogleScholar } from 'react-icons/fa6';
 import { HiMoon, HiSun } from 'react-icons/hi';
 import { useScrollSpy } from '../../../hooks';
 import { useThemeStore } from '../../../store';
 import './Header.css';
-import { FaGoogleScholar } from 'react-icons/fa6';
 
 const navItems = [
   { id: 'home', label: 'Home' },
@@ -59,7 +59,8 @@ const Header = () => {
             scrollToSection('home');
           }}
         >
-          Oliver Sala's Homepage
+          <div className="main-text">OS</div>
+          <div className="horizon-line"></div>
         </a>
 
         <nav className="nav">

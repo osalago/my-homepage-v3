@@ -25,8 +25,7 @@ const Hero = () => {
               Hi, I'm <span className="hero-name">Dr. Oliver Sala</span>
             </h1>
             <h2 className="hero-subtitle">
-              Full-Stack Developer & Designer | Machine Learning Engineer |
-              Research Scientist | Quantum Chemist{' '}
+              Web Developer & Designer | ML Engineer & Developer
             </h2>
             <p className="hero-description">
               I create beautiful, responsive web applications with modern
@@ -53,7 +52,7 @@ const Hero = () => {
           <div className="hero-image">
             <div className="hero-avatar-wrapper">
               <img
-                src="https://api.dicebear.com/7.x/personas/svg?seed=Mark&backgroundColor=b6e3f4"
+                src="public/images/avatar_os.png" //src="https://api.dicebear.com/7.x/personas/svg?seed=Mark&backgroundColor=b6e3f4"
                 alt="Dr. Oliver Sala"
                 className="hero-avatar"
               />

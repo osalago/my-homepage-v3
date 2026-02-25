@@ -15,36 +15,36 @@
   --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
 
   /* Primary colors */
-  --color-primary: #4F7DF3;
-  --color-primary-light: #7B9EF7;
-  --color-primary-dark: #3A5FD9;
+  --color-primary: #4f7df3;
+  --color-primary-light: #7b9ef7;
+  --color-primary-dark: #3a5fd9;
   --color-primary-bg: rgba(79, 125, 243, 0.1);
   --color-primary-bg-hover: rgba(79, 125, 243, 0.15);
   --color-primary-shadow: rgba(79, 125, 243, 0.25);
 
   /* Background colors */
-  --color-bg-primary: #FFFFFF;
-  --color-bg-secondary: #F8FAFC;
-  --color-bg-tertiary: #F1F5F9;
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f8fafc;
+  --color-bg-tertiary: #f1f5f9;
 
   /* Text colors */
-  --color-text-primary: #1E293B;
-  --color-text-secondary: #64748B;
-  --color-text-muted: #94A3B8;
+  --color-text-primary: #1e293b;
+  --color-text-secondary: #64748b;
+  --color-text-muted: #94a3b8;
 
   /* Border colors */
-  --color-border: #E2E8F0;
-  --color-border-hover: #CBD5E1;
+  --color-border: #e2e8f0;
+  --color-border-hover: #cbd5e1;
 
   /* Shadow colors */
   --color-shadow: rgba(15, 23, 42, 0.06);
   --color-shadow-hover: rgba(15, 23, 42, 0.12);
 
   /* Validation colors */
-  --color-error: #EF4444;
+  --color-error: #ef4444;
   --color-error-bg: rgba(239, 68, 68, 0.05);
   --color-error-shadow: rgba(239, 68, 68, 0.2);
-  --color-success: #22C55E;
+  --color-success: #22c55e;
   --color-success-shadow: rgba(34, 197, 94, 0.2);
 
   /* Neon color logo */
@@ -53,34 +53,41 @@
   --neon-teal: #00e5c8;
   --dark-bg: #0a0e17;
   --darker-bg: #060a12;
+  --grid-color: rgba(0, 200, 255, 0.04);
+  --text-primary: #e0eef5;
+  --text-muted: rgba(192, 216, 232, 0.55);
+  --text-dim: rgba(192, 216, 232, 0.3);
   --grid-line: rgba(0, 200, 255, 0.06);
-  --glow-green: 0 0 20px rgba(0,255,136,0.4), 0 0 60px rgba(0,255,136,0.15);
-  --glow-blue: 0 0 20px rgba(0,200,255,0.4), 0 0 60px rgba(0,200,255,0.15);
-  --glow-teal: 0 0 20px rgba(0,229,200,0.4), 0 0 60px rgba(0,229,200,0.15);
+  --glow-green:
+    0 0 20px rgba(0, 255, 136, 0.4), 0 0 60px rgba(0, 255, 136, 0.15);
+  --glow-blue:
+    0 0 20px rgba(0, 200, 255, 0.4), 0 0 60px rgba(0, 200, 255, 0.15);
+  --glow-teal:
+    0 0 20px rgba(0, 229, 200, 0.4), 0 0 60px rgba(0, 229, 200, 0.15);
 }
 
 /* ========================================
    CSS VARIABLES - DARK THEME
    ======================================== */
 :root.dark,
-[data-theme="dark"] {
+[data-theme='dark'] {
   /* Primary colors remain similar but adjusted for dark mode */
-  --color-primary: #6B8DF5;
-  --color-primary-light: #8BA4F7;
-  --color-primary-dark: #5678E8;
+  --color-primary: #6b8df5;
+  --color-primary-light: #8ba4f7;
+  --color-primary-dark: #5678e8;
   --color-primary-bg: rgba(107, 141, 245, 0.12);
   --color-primary-bg-hover: rgba(107, 141, 245, 0.18);
   --color-primary-shadow: rgba(107, 141, 245, 0.3);
 
   /* Background colors */
-  --color-bg-primary: #0F172A;
-  --color-bg-secondary: #1E293B;
+  --color-bg-primary: #0f172a;
+  --color-bg-secondary: #1e293b;
   --color-bg-tertiary: #334155;
 
   /* Text colors */
-  --color-text-primary: #F1F5F9;
-  --color-text-secondary: #94A3B8;
-  --color-text-muted: #64748B;
+  --color-text-primary: #f1f5f9;
+  --color-text-secondary: #94a3b8;
+  --color-text-muted: #64748b;
 
   /* Border colors */
   --color-border: #334155;
@@ -91,10 +98,10 @@
   --color-shadow-hover: rgba(0, 0, 0, 0.35);
 
   /* Validation colors (dark mode) */
-  --color-error: #F87171;
+  --color-error: #f87171;
   --color-error-bg: rgba(248, 113, 113, 0.1);
   --color-error-shadow: rgba(248, 113, 113, 0.25);
-  --color-success: #4ADE80;
+  --color-success: #4ade80;
   --color-success-shadow: rgba(74, 222, 128, 0.25);
 }
 
@@ -121,7 +128,9 @@ body {
   line-height: 1.6;
   color: var(--color-text-primary);
   background-color: var(--color-bg-primary);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 /* Focus styles for accessibility */
@@ -152,7 +161,8 @@ img {
 }
 
 /* List defaults */
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
