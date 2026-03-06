@@ -4,18 +4,14 @@
 export const projects = [
   {
     id: 1,
-    title: 'Odor Prediction System',
-    description:
-      'A full-featured online odor profile prediction platform with scent database & recipe input.',
-    image: '/public/images/odorPrediction-v2.jpg',
-    technologies: [
-      'Python',
-      'javascript',
-      'ML',
-      'Quantum Chemistry',
-      'backend',
-    ],
-    link: 'https://patents.google.com/patent/US20230360744A1/en',
+    title: 'ML Projects',
+    description: 'Developed models for Polymer- and Inorganic Chemistry.',
+    image:
+      'https://plus.unsplash.com/premium_photo-1764692560001-ec7cd92b21ee?q=80&w=2660&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    //'https://media.istockphoto.com/id/1457951939/de/foto/k%C3%BCnstliche-intelligenz-gehirn-cpu-konzept.jpg?s=1024x1024&w=is&k=20&c=ZcGmAmEWzDxlqKYEKRensUeeZf4MZBEv7GUu7JQWmj4=',
+    //'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop',
+    technologies: ['PyTorch', 'scikit-learn', 'JMP', 'RDKit'],
+    link: '#',
   },
   {
     id: 2,
@@ -28,25 +24,32 @@ export const projects = [
   },
   {
     id: 3,
+    title: 'Quantumchemical Odor Prediction',
+    description:
+      'A full-featured online odor profile prediction platform with scent database & recipe input.',
+    image: '/public/images/odorPrediction-v2.jpg',
+    technologies: [
+      'Py',
+      'JS',
+      'ML',
+      'backend',
+      'KNIME',
+    ],
+    link: 'https://patents.google.com/patent/US20230360744A1/en',
+  },
+  {
+    id: 4,
     title: 'Google Scholar',
     description:
       'View my publications, patents, and book-contribution on Google Scholar.',
     image:
-      'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&h=600&fit=crop',
+      'images/OS-logo-app-icon-v1.png',
+      //'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&h=600&fit=crop',
     technologies: ['Cheminformatics', 'Chemistry', 'Science'],
     link: 'https://scholar.google.com/citations?user=4V-m6ZcAAAAJ&hl=de',
   },
+
   /*
-  {
-    id: 4,
-    title: 'Social Media Clone',
-    description:
-      'Full-stack social platform with posts, comments, likes, and user profiles.',
-    image:
-      'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop',
-    technologies: ['React', 'Express', 'PostgreSQL'],
-    link: '#',
-  },
   {
     id: 5,
     title: 'Google Scholar',
