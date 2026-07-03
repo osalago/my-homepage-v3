@@ -28,13 +28,7 @@ export const projects = [
     description:
       'A full-featured online odor profile prediction platform with scent database & recipe input.',
     image: '/public/images/odorPrediction-v2.jpg',
-    technologies: [
-      'Py',
-      'JS',
-      'ML',
-      'backend',
-      'KNIME',
-    ],
+    technologies: ['Py', 'JS', 'ML', 'backend', 'KNIME'],
     link: 'https://patents.google.com/patent/US20230360744A1/en',
   },
   {
@@ -42,35 +36,31 @@ export const projects = [
     title: 'Google Scholar',
     description:
       'View my publications, patents, and book-contribution on Google Scholar.',
-    image:
-      'images/OS-logo-app-icon-v1.png',
-      //'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&h=600&fit=crop',
+    image: 'images/OS-logo-app-icon-v1.png',
+    //'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&h=600&fit=crop',
     technologies: ['Cheminformatics', 'Chemistry', 'Science'],
     link: 'https://scholar.google.com/citations?user=4V-m6ZcAAAAJ&hl=de',
   },
 
-  /*
   {
     id: 5,
-    title: 'Google Scholar',
-    description: 'View my publications, books, and patents on Google Scholar.',
-    image:
-      'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=600&fit=crop',
-    technologies: ['Cheminformatics', 'Chemistry', 'Science'],
-    link: '#',
+    title: 'Online Games',
+    description: 'Full functional online gaming platforms. More to come.',
+    image: 'images/blackjack-gameplatform.png',
+    //  'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=600&fit=crop',
+    technologies: ['React', 'Vite', 'Tailwind'],
+    link: 'https://github.com/osalago/blackjack-v2.git',
   },
   {
     id: 6,
     title: 'Vacation App',
     description:
-      'Traveling with your RV made easy. Plan trips, find campgrounds, and track expenses.',
-    image: '/public/images/carthago.png',
-    technologies: ['React', 'API', 'Tailwind'],
+      'Traveling with your RV made easy. Plan trips, find campgrounds, and track expenses. Coming soon..',
+    image: '/public/images/vacation-image-1.jpg',
+    technologies: ['React', 'API', 'Backend', 'UX/UI', 'Python'],
     link: '#',
   },
-*/
 ];
-
 
 // To add a new project, simply add a new object following the same structure:
 // {
